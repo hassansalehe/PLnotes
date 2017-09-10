@@ -5,7 +5,28 @@
 
 ### String Manipulation
 
-##### Getting a substring
+###### 1. Finding first match
+1. Use `size_type find()` function of string. If no result found, `std::npos (-1) is returned`:
+```cpp
+idx = myStr.find( str, size_type pos = 0 );	
+idx = myStr.find( charPtr, pos, count );
+idx = myStr.find( charPtr, pos = 0 );
+idx = myStr.find( charC, pos = 0 );
+```
+2. For a set of characters you want to get first match of one of them, use `find_first_of`.
+Its arguments format is the same as of `find`.
+
+3. For finding the last match from the string, use `rfind()`
+```cpp
+idx = myStr.rfind( str, size_type pos = npos );	
+idx = myStr.rfind( charPtr, pos, count );
+idx = myStr.rfind( charPtr, pos = npos );
+idx = myStr.rfind( charC, pos = npos );
+```
+
+4. `find_last_of` works in similar manner to `find_first_of` but from the end of the string.
+
+##### 1. Getting a substring
 ```cpp 
 //1. get 'count' number of characters, starting at startPos
 string substring = myString.substr( startPos, count );
@@ -17,7 +38,7 @@ string tillEnd = myString.substr( startPos ); // [startPos, size())
 //       2. Complexity is linear.
 ```
 
-#####  Appending string/characters
+##### 2. Appending string/characters
 ```cpp
 // append a copy of otherStr
 string & modifiedStr = myStr.append( otherStr );
@@ -44,7 +65,7 @@ string & modifiedStr = myStr.append( initializer_char_list );
 //       2. See also operator+=, push_back( charC )
 ```
 
-##### Comparing strings
+##### 3. Comparing strings
 The main function is `compare(...)`. It returns 
 * `= 0:` two strings are equal.
 * `< 0:` value of 1st char that does'nt match is lower in comparedStr, or comparedStr is shorter.
@@ -60,4 +81,53 @@ int res = comparedStr.compare( comparedPos, len, comparingCharPtr, len);
 // Note: !=, <, >, ===, etc, are supported.
 ```
 
-##### Converting to lower/upper case
+##### 4. Converting to lower/upper case
+
+##### 5. Convert string representation to numeral
+```cpp
+int  v = stoi( str, posPtr, base );
+int  v = stoi( str, posPtr, base );
+long v = stol( str, posPtr, base );
+long v = stol( str, posPtr, base );
+long long v = stoll( str, posPtr, base );
+long long v = stoll( str, posPtr, base );
+
+int  v = atoi( charPtr );
+long v = atol( charPtr );
+long long v atoll( charPtr );
+
+Note: 1. posPtr is for holding number of characters processed. 
+      2. base(10) and posPtr(0) are optional. 
+      3. stoul() and stoull() are for returning unsigned version of numbers.
+      4. stof/stod/stold for float, double and long double. 
+      5. Exceptions are through in case of failure.
+```
+
+##### 6. Numeral to string representation 
+1. Use `std` function `to_string()` to convert any number to string.
+```cpp
+// accepts int, long, llong, ulong, ullong, float, double, long double
+std::string stringRep = std::to_string( value );
+
+Note: 
+```
+2. Also, you can use `std::sprintf(buff, format, value)`
+```cpp
+// buff is char *, format is one of "%d", "%ld", "%lld", "%u", "%lu", "%llu", "%f", "%Lf".
+// Result is stored in buff
+char buff[20];
+std::fprintf(buff, "%d", 20170309);
+```
+
+##### 5. Sorting characters
+* You use `sort()` from `#include<algorithm>`
+* ``` std::sort(myStr.begin(), myStr.end());```
+
+##### 6. Reverse string
+* You use `reverse()` from `#include<algorithm>`
+* ``` std::reverse(myStr.begin(), myStr.end());```
+
+
+##### 9. Remove duplicate characters
+
+##### 10. Splitting string
