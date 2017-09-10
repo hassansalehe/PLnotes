@@ -1,7 +1,8 @@
 # Notes for the C++ Programming Language.
-* Consise
-* Minimal
-* Simple, illustrative examples
+
+
+ | Consise | Minimal  | Simple, illustrative examples |
+ | ------- | ---------- | --------------------------- |
 
 ### String Manipulation
 
@@ -130,4 +131,4 @@ std::fprintf(buff, "%d", 20170309);
 
 ##### 9. Remove duplicate characters
 
-##### 10. Splitting string
+##### 10. [Splitting](https://goo.gl/72PTXP) string
