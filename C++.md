@@ -1,14 +1,14 @@
 # Notes for the C++ Programming Language.
-* Consice
+* Consise
 * Minimal
-* Simple illustrative examples
+* Simple, illustrative examples
 
 ### String Manipulation
 
 ###### 1. Finding first match
-1. Use `size_type find()` function of string. If no result found, `std::npos (-1) is returned`:
+1. Use `find()` function of string. If no result found, `std::npos (-1) is returned`:
 ```cpp
-idx = myStr.find( str, size_type pos = 0 );	
+size_type idx = myStr.find( str, size_type pos = 0 );	
 idx = myStr.find( charPtr, pos, count );
 idx = myStr.find( charPtr, pos = 0 );
 idx = myStr.find( charC, pos = 0 );
@@ -109,7 +109,7 @@ Note: 1. posPtr is for holding number of characters processed.
 // accepts int, long, llong, ulong, ullong, float, double, long double
 std::string stringRep = std::to_string( value );
 
-Note: 
+Note: May throw bad_alloc in case of failure allocate memory in string constructor.
 ```
 2. Also, you can use `std::sprintf(buff, format, value)`
 ```cpp
