@@ -132,3 +132,13 @@ std::fprintf(buff, "%d", 20170309);
 ##### 9. Remove duplicate characters
 
 ##### 10. [Splitting](https://goo.gl/72PTXP) string
+
+
+### Algorithms
+Algorithms which are found in `algorithm` library. Algorithms operate on 
+range of elements `(first, last)` which is the range `[first, last)`.
+
+##### 1. Non-modifying sequence operations 
+* 
+
+
