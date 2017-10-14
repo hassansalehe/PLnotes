@@ -141,4 +141,8 @@ range of elements `(first, last)` which is the range `[first, last)`.
 ##### 1. Non-modifying sequence operations 
 * 
 
+### File maniputations
+#### Reading from a file
+```
+```
 
