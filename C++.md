@@ -140,6 +140,12 @@ range of elements `(first, last)` which is the range `[first, last)`.
 
 ##### 1. Non-modifying sequence operations 
 * 
+### Bit manipulations
+* The unary operator `~` flips the bits. E.g; `~0x0 == 0xFFFFFFFF`. 
+
+One usage scenario is clearing a bit at kth location in a given integer n:
+`n = n & ~(1 << 31 | 1 << k)`
+
 
 ### File maniputations
 #### Reading from a file
