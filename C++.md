@@ -146,6 +146,8 @@ range of elements `(first, last)` which is the range `[first, last)`.
 One usage scenario is clearing a bit at kth location in a given integer n:
 `n = n & ~(1 << 31 | 1 << k)`
 
+* The `bitset` class template stores binary representation of values. 
+It has very useful bit access functions like `count()` which returns number of 1s
 
 ### File maniputations
 #### Reading from a file
